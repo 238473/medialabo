@@ -4,10 +4,14 @@ p {
 
 p.info {
 	font-size: 10pt;
+	font-size:small;
+    background-color:#dfdfdf;
 }
 
 h1 {
-	background-color: #7f7fcf;
+	
+	text-shadow: navy 1px 0px 10px;
+ color: white;
 }
 
 h2 {
@@ -16,9 +20,17 @@ h2 {
 }
 
 div#zentai {
-	display: flex;
-	flex-direction: row;
+	/* display: flex;
+	flex-direction: row; */
+	display:grid;
+    flex-direction:row;
+    grid-template-columns:1fr 1fr;
+    height: 200px 200px;
+    grid-gap: 10px;
 	width: 1024px;
+}
+img{
+    float:right;
 }
 
 div#zentai > div {
