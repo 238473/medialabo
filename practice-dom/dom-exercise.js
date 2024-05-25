@@ -14,13 +14,64 @@ let data = [
 //// 注意: 以上は編集しないこと!
 
 // 練習4-2 メッセージ追加プログラム
-
+let h2=document.querySelector('h2#ex42');
+let p=document.createElement('p');
+p.textContent ='写真表と都市の緯度経度のページです'; 
+h2.insertAdjacentElement('afterend',p); 
+p.style.textEmphasis='sesame green';
 
 // 練習4-3 写真表作成プログラム
+/*let div=document.querySelector('div#phototable');
+let img =document.createElement('img');
+img.setAttribute('src','taro.png');
+let sha1 = document.createElement('p');  
+sha1.textContent='taro.png';                      
+div.insertAdjacentElement('beforeend',sha1); 
+div.insertAdjacentElement('beforeend',img); 
+*/
+
+let div = document.querySelector('div');
+let img =document.createElement('img');
+img.setAttribute('src', 'taro.png'); 
+let sha =document.createElement('p'); 
+sha.insertAdjacentElement('beforeend', img);
+div.insertAdjacentElement('beforeend',sha);
+
+di = document.querySelector('div');
+ im =document.createElement('img');
+im.setAttribute('src', 'jiro.png'); 
+let shas =document.createElement('p'); 
+shas.insertAdjacentElement('beforeend', im);
+di.insertAdjacentElement('beforeend',shas);
+
+d = document.querySelector('div');
+ i =document.createElement('img');
+i.setAttribute('src', 'hanako.png'); 
+let shao =document.createElement('p'); 
+shao.insertAdjacentElement('beforeend', i);
+d.insertAdjacentElement('beforeend',shao);
+
+
 
 
 // 練習4-4 箇条書き削除プログラム
-
+let cange=[
+	{location},
+	{location},
+	{location}
+]
+for(li1 of cange){
+	let w=document.querySelector('li');
+	w.remove();
+  } 
 
 // 練習4-5 箇条書き追加プログラム
+let ul=document.querySelector('ul#location');
+ for(let n of data){
+	let li4=document.createElement('li');
+	li4.textContent=(n.name+'...緯度:'+n.lat+',経度:'+n.lng);
+	ul.insertAdjacentElement('afterend',li4);
 
+  } 
+
+  
