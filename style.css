@@ -1,9 +1,26 @@
-p{font-family:Georgia;
+p{
+    font-family:Georgia;
     color:navy;
-}h1{
+}
+h1,h3{
     font-size:2em;
     color:blue;
 }
-h2,h3,h4,h5,h6,h7,h8{
+p.special{
+  color:red;
+}
+h2{
     background-color: aquamarine;
 }
+
+a:link {
+    color: red;
+  }
+  
+  a:visited {
+    color: green;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
