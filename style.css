@@ -1,6 +1,6 @@
 p{
     font-family:Georgia;
-    color:navy;
+    color:purple;
 }
 h1,h3{
     font-size:2em;
@@ -10,6 +10,7 @@ p.special{
   color:red;
 }
 h2{
+  
     background-color: aquamarine;
 }
 

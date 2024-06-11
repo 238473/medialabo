@@ -39,12 +39,12 @@ let li12=document.createElement('li');
 
 
 
-li7.textContent="開始時刻:"+data.list.g1[1].start_time;
-li8.textContent="終了時刻;"+data.list.g1[1].end_time;
-li9.textContent="タイトル:"+data.list.g1[1].title;
-li10.textContent="サブタイトル:"+data.list.g1[1].subtitle;
-li11.textContent="番組説明:"+data.list.g1[1].content;
-li12.textContent="出演者:"+data.list.g1[1].act;
+li7.textContent="開始時刻:"+data.list.o1.getAttribute("value")+[1].start_time;
+li8.textContent="終了時刻;"+data.list.o1.getAttribute("value")+[1].end_time;
+li9.textContent="タイトル:"+data.list.o1.getAttribute("value")+[1].title;
+li10.textContent="サブタイトル:"+data.list.o1.getAttribute("value")+[1].subtitle;
+li11.textContent="番組説明:"+data.list.o1.getAttribute("value")+[1].content;
+li12.textContent="出演者:"+data.list.o1.getAttribute("value")+[1].act;
 
 ul1.insertAdjacentElement('beforeend',li7);
 ul1.insertAdjacentElement('beforeend',li8);
@@ -74,12 +74,12 @@ let li6=document.createElement('li');
 
 
 
-li1.textContent='開始時刻:'+data.list.g1[0].start_time;
-li2.textContent='終了時刻;'+data.list.g1[0].end_time;
-li3.textContent="タイトル:"+data.list.g1[0].title;
-li4.textContent="サブタイトル:"+data.list.g1[0].subtitle;
-li5.textContent="番組説明:"+data.list.g1[0].content;
-li6.textContent="出演者:記載なし"+data.list.g1[0].act;
+li1.textContent='開始時刻:'+data.list.o1.getAttribute("value")+[0].start_time;
+li2.textContent='終了時刻;'+data.list.o1.getAttribute("value")+[0].end_time;
+li3.textContent="タイトル:"+data.list.o1.getAttribute("value")+[0].title;
+li4.textContent="サブタイトル:"+data.list.o1.getAttribute("value")+[0].subtitle;
+li5.textContent="番組説明:"+data.list.o1.getAttribute("value")+[0].content;
+li6.textContent="出演者:記載なし"+data.list.o1.getAttribute("value")+[0].act;
 
 ul3.insertAdjacentElement('beforeend',li1);
 ul3.insertAdjacentElement('beforeend',li2);
@@ -99,9 +99,8 @@ h1.textContent='NHKの番組表（検索結果は2件）';
 div.insertAdjacentElement('afterend',h1);
 
 
+let
 
-let b1=document.querySelector('select#tyann');
-b1.addEventListener('click',changebutton);
 }
 
 // 通信エラーが発生した時の処理

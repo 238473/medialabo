@@ -1,6 +1,11 @@
 ul {
 color:blue;
 }
+h4{
+    text-shadow: red 1px 0px 10px;
+    color: white;
+    font-size:1.9em;
+}
 h1{
     text-shadow: red 1px 0px 10px;
     color: white;
@@ -9,6 +14,11 @@ h2{
     background-color: blanchedalmond;
     
 }
+body {
+    background: linear-gradient(to right,  orange, yellow, green);
+}
+
+
 
 
 
