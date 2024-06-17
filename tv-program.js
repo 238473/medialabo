@@ -202,14 +202,16 @@ function sendRequest() {
 
     // data が文字列型なら，オブジェクトに変換する
     function showResult(resp) {
-      let previousUl = document.querySelector('ul');
-      if (previousUl) previousUl.remove();
-      let previousH2 = document.querySelector('h2');
-      if (previousH2) previousH2.remove();
-      let previousH3 = document.querySelector('h2');
-      if (previousH3) previousH2.remove();
-      let previousH4 = document.querySelector('h4');
-      if (previousH4) previousH4.remove();
+      let a = document.querySelector('ul');
+      if (a) a.remove();
+      let b = document.querySelector('h2');
+      if (b) b.remove();
+      let c = document.querySelector('ul');
+      if (c) c.remove();
+      let d = document.querySelector('h2');
+      if (d) d.remove();
+      let e = document.querySelector('h4');
+      if (e) e.remove();
 
       
       // 結果が表示されている場合には一度削除する
