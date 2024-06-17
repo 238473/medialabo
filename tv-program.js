@@ -199,25 +199,17 @@ function sendRequest() {
 }
 
 // 通信が成功した時の処理
-let kaisu=0;
+
     // data が文字列型なら，オブジェクトに変換する
     function showResult(resp) {
-      if(kaisu>0){
-        let w=document.querySelector('ul');
-        let w1=document.querySelector('ul');
-        let v=document.querySelector('h2');
-        let v1=document.querySelector('h4');
-        w.remove();
-        v.remove();
-        v1.remove();
-        w1.remove();
-        let w12=document.querySelector('ul');
-        let w11=document.querySelector('ul');
-        let v12=document.querySelector('h2');
-        w12.remove();
-        v12.remove();
-        w11.remove(); 
-      }
+      let previousUl = document.querySelector('ul');
+      if (previousUl) previousUl.remove();
+      let previousH2 = document.querySelector('h2');
+      if (previousH2) previousH2.remove();
+      let previousH3 = document.querySelector('h2');
+      if (previousH3) previousH2.remove();
+      let previousH4 = document.querySelector('h4');
+      if (previousH4) previousH4.remove();
 
       
       // 結果が表示されている場合には一度削除する
@@ -232,7 +224,8 @@ let kaisu=0;
     let div=document.querySelector('div#result');
 
 
-if(o1.getAttribute("value")==='e1'){
+if(o1.value === 'e1' && data.list && data.list.e1 && data.list.e1.length > 1){
+  
   let ul1=document.createElement('ul');
   let li7=document.createElement('li');
   let li8=document.createElement('li');
@@ -249,17 +242,12 @@ if(o1.getAttribute("value")==='e1'){
     li10.textContent = "サブタイトル:" + data.list.e1[1].subtitle;
     li11.textContent = "番組説明:" + data.list.e1[1].content;
     li12.textContent = "出演者:" + data.list.e1[1].act;
+
+    
   
   
   
-  /*
-  li7.textContent="開始時刻:"+data.list.g1[1].start_time;
-  li8.textContent="終了時刻;"+data.list.g1[1].end_time;
-  li9.textContent="タイトル:"+data.list.g1[1].title;
-  li10.textContent="サブタイトル:"+data.list.g1[1].subtitle;
-  li11.textContent="番組説明:"+data.list.g1[1].content;
-  li12.textContent="出演者:"+data.list.g1[1].act;
-  */
+  
   
   ul1.insertAdjacentElement('beforeend',li7);
   ul1.insertAdjacentElement('beforeend',li8);
@@ -305,7 +293,21 @@ if(o1.getAttribute("value")==='e1'){
   ul3.insertAdjacentElement('beforeend',li6);
   div.insertAdjacentElement('afterend',ul3);
   
-}else {
+  let h2=document.createElement('h2');
+h2.textContent='検索結果1件目';
+div.insertAdjacentElement('afterend',h2);
+
+let h1=document.createElement('h4');
+h1.textContent='NHKの番組表（検索結果は2件）';
+div.insertAdjacentElement('afterend',h1);
+  
+  
+
+}else if(o1.value === 'g1' && data.list && data.list.g1 && data.list.g1.length > 1) {
+ 
+
+  
+  
   let ul1=document.createElement('ul');
 let li7=document.createElement('li');
 let li8=document.createElement('li');
@@ -378,9 +380,6 @@ ul3.insertAdjacentElement('beforeend',li5);
 ul3.insertAdjacentElement('beforeend',li6);
 div.insertAdjacentElement('afterend',ul3);
 
-}
-
-
 let h2=document.createElement('h2');
 h2.textContent='検索結果1件目';
 div.insertAdjacentElement('afterend',h2);
@@ -388,9 +387,20 @@ div.insertAdjacentElement('afterend',h2);
 let h1=document.createElement('h4');
 h1.textContent='NHKの番組表（検索結果は2件）';
 div.insertAdjacentElement('afterend',h1);
+  
+ 
+
+}else {
+  // データが存在しない場合の処理
+  let h1 = document.createElement('h4');
+  h1.textContent = 'データが存在しません。';
+  div.insertAdjacentElement('afterend', h1);
+}
 
 
-      kaisu=kaisu+1;
+
+
+     
 }
 
 
